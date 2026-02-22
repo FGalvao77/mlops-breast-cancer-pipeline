@@ -1,7 +1,7 @@
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 
-def load_data(as_frame:bool=False) -> tuple:
+def load_data(as_frame:bool=False, descr:bool=False) -> tuple:
     '''
     Loads the breast cancer dataset from scikit-learn.
     This function retrieves the breast cancer dataset, which is commonly used for
@@ -18,8 +18,8 @@ def load_data(as_frame:bool=False) -> tuple:
         :return: A tuple containing the feature dataset (X) and target variable (y).
         :rtype: tuple
     '''
-
-    print(f'INFOS: {data.DESCR}')
+    if descr == True:
+        print(f'Description and general information about the dataset\n: {data.DESCR}')
     '''
     Docstring for data.DESCR
         :return: A detailed description of the dataset, including its features, 
