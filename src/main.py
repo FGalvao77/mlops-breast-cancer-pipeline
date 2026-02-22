@@ -54,7 +54,8 @@ def main():
                                                     random_state=config['random_state'], 
                                                     stratify=config['stratify'])
     # Exibir as formas dos conjuntos de treino e teste para verificação
-    print(f'SHAPES: {X_train.shape}, {X_test.shape}, {y_train.shape}, {y_test.shape}')
+    print(f'SHAPES')
+    print(f'X_train: {X_train.shape} | X_test: {X_test.shape} | y_train: {y_train.shape} | y_test: {y_test.shape}\n')
 
     # Criando o pipeline de pré-processamento e modelagem
     pipe = Pipeline(steps=[
